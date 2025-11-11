@@ -1,0 +1,22 @@
+# Archivos de entorno
+.env
+*.env
+venv/
+env/
+
+# Archivos de Django
+db.sqlite3
+*.pot
+*.pyc
+*.pyo
+
+# Archivos estáticos generados automaticamente
+staticfiles/
+
+# Archivos subidos por los usuarios
+media/
+
+#Archivos de compilación de React
+node_modules/
+build/
+dist/
