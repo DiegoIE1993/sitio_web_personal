@@ -1,9 +1,8 @@
 from django.db import models
 
 # Definición de modelos
-
+#--- Perlfil ---
 class Profile(models.Model):
-    
     #Definicion de campos del modelo profile
     full_name = models.CharField(max_length=100)
     role = models.CharField(max_length=100, verbose_name="Profesional")
@@ -18,9 +17,9 @@ class Profile(models.Model):
     def __str__(self):
         return self.full_name
     
-    
+#--- Proyectos ---
 class Project(models.Model):
-    #Definición campos del modelo project
+    #Definición campos del modelo Project
     title = models.CharField(max_length=200, verbose_name="Title")
     description = models.TextField(verbose_name="Description")
     image = models.ImageField(upload_to='proyectos/', blank=True, null=True, verbose_name="Image")
@@ -34,8 +33,9 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
-
+#Certificaciones
 class Certification(models.Model):
+    #Definicion de campos del modelo Certification
     title = models.CharField(max_length=200)
     institution = models.CharField(max_length=200)
     date_obtained = models.DateField()
@@ -48,8 +48,9 @@ class Certification(models.Model):
         return f"{self.title} - {self.institution}"
 
 
-
+# Mensaje de contacto ---
 class Message(models.Model):
+    #Definicion de campos del modelo Message
     name = models.CharField(max_length=100)
     email = models.EmailField()
     content = models.TextField()

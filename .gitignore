@@ -1,8 +1,18 @@
+#Archivos del sistema
+__pycache__/
+*.py[cod]
+*.DS_Store
+*.log
+
 # Archivos de entorno
 .env
 *.env
 venv/
 env/
+
+# Archivos temporales de VSCode o PyCharm
+.vscode/
+.idea/
 
 # Archivos de Django
 db.sqlite3
